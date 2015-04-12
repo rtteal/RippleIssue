@@ -4,4 +4,4 @@ I'm trying to simulate the ripple effect in [this](https://developer.android.com
 
 ###GIF Showing Issue
 
-![Video Walkthrough](img/ripple-issue.gif)
+![Video Walkthrough](img/RippleIssue.gif)
