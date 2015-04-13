@@ -18,14 +18,16 @@ public class ListFragment extends Fragment {
 
     private List<Item> items = new ArrayList<>();
 
-    public static final String FRAG = "Fragment";
+    public static final String FRAG = "Display Fragment";
     public static final String DIALOG_FRAG = "Display Alert";
+    public static final String ACTIVITY = "Display Activity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        items.add(new Item(FRAG));
+        items.add(new Item(ACTIVITY));
         items.add(new Item(DIALOG_FRAG));
+        items.add(new Item(FRAG));
     }
 
     @Override

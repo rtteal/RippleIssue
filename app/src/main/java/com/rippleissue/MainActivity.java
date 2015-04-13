@@ -1,6 +1,7 @@
 package com.rippleissue;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,7 +23,13 @@ public class MainActivity extends ActionBarActivity implements RippleAdapter.OnI
     }
 
     @Override
-    public void fragClick() {
+    public void displayActivity() {
+        Intent i = new Intent(this, DetailActivity.class);
+        startActivity(i);
+    }
+
+    @Override
+    public void displayFrag() {
         Fragment fragment = DetailFragment.newInstance();
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
@@ -32,7 +39,7 @@ public class MainActivity extends ActionBarActivity implements RippleAdapter.OnI
     }
 
     @Override
-    public void displayAlertClick() {
+    public void displayAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Hello");
         builder.create();

@@ -15,8 +15,9 @@ public class RippleAdapter extends RecyclerView.Adapter<RippleAdapter.VH> {
     private OnItemClickListener listener;
 
     public interface OnItemClickListener {
-        void fragClick();
-        void displayAlertClick();
+        void displayFrag();
+        void displayAlert();
+        void displayActivity();
     }
 
     public RippleAdapter(Context context, List<Item> items){
@@ -39,10 +40,13 @@ public class RippleAdapter extends RecyclerView.Adapter<RippleAdapter.VH> {
             public void onClick(View v) {
                 switch (i.text){
                     case ListFragment.FRAG:
-                        listener.fragClick();
+                        listener.displayFrag();
                         break;
                     case ListFragment.DIALOG_FRAG:
-                        listener.displayAlertClick();
+                        listener.displayAlert();
+                        break;
+                    case ListFragment.ACTIVITY:
+                        listener.displayActivity();
                         break;
                 }
             }
